@@ -4,7 +4,7 @@ package com.codingbat.warmup_2;
  * @author Adam Wandoch
  */
 public class StringX {
-    public static String stringX(String str) {
+    public String stringX(String str) {
         if (str != null) {
             if (str.length() < 3) {
                 return str;

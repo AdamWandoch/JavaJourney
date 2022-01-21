@@ -4,7 +4,7 @@ package com.codingbat.warmup_2;
  * @author Adam Wandoch
  */
 public class AltPairs {
-    public static String altPairs(String str) {
+    public String altPairs(String str) {
         if (str != null) {
             if (str.length() > 2) {
                 String result = "";
