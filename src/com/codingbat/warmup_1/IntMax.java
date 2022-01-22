@@ -1,6 +1,6 @@
 package com.codingbat.warmup_1;
 
-/**
+/** https://codingbat.com/prob/p101887
  * @author Adam Wandoch
  */
 public class IntMax {

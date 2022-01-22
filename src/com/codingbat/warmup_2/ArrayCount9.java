@@ -1,6 +1,6 @@
 package com.codingbat.warmup_2;
 
-/**
+/** https://codingbat.com/prob/p184031
  * @author Adam Wandoch
  */
 public class ArrayCount9 {

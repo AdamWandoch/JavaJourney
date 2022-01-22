@@ -1,6 +1,6 @@
 package com.codingbat.warmup_2;
 
-/**
+/** https://codingbat.com/prob/p171260
  * @author Adam Wandoch
  */
 public class StringX {

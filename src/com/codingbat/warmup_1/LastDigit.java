@@ -1,6 +1,6 @@
 package com.codingbat.warmup_1;
 
-/**
+/** https://codingbat.com/prob/p125339
  * @author Adam Wandoch
  */
 public class LastDigit {

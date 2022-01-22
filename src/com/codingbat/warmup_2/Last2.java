@@ -1,6 +1,6 @@
 package com.codingbat.warmup_2;
 
-/**
+/** https://codingbat.com/prob/p178318
  * @author Adam Wandoch
  */
 public class Last2 {

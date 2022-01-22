@@ -1,6 +1,6 @@
 package com.codingbat.warmup_1;
 
-/**
+/** https://codingbat.com/prob/p151713
  * @author Adam Wandoch
  */
 public class MixStart {

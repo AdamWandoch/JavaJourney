@@ -1,6 +1,6 @@
 package com.codingbat.warmup_1;
 
-/**
+/** https://codingbat.com/prob/p125268
  * @author Adam Wandoch
  */
 public class EndUp {

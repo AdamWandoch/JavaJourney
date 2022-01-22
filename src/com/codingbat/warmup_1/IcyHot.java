@@ -1,6 +1,6 @@
 package com.codingbat.warmup_1;
 
-/**
+/** https://codingbat.com/prob/p192082
  * @author Adam Wandoch
  */
 public class IcyHot {
