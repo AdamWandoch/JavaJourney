@@ -3,8 +3,8 @@
 
 #### Current plan as follows:  
 * ## Step 1: Core Java
-- [ ] finish the introductory online course
-- [ ] practice core Java on [Exercism](https://exercism.org/tracks/java) and [CodingBat](https://github.com/AdamWandoch/JavaJourney/tree/master/src/com/codingbat)
+- [ ] finish the [introductory online course](https://www.udemy.com/course/java-the-complete-java-developer-course/)
+- [ ] [practice](https://github.com/AdamWandoch/JavaJourney/tree/master/src/com) core Java on [Exercism](https://exercism.org/tracks/java) and [CodingBat](https://codingbat.com/java)
 * ## Step 2: Certification
 - [ ] prepare for Oracle Java SE 11 Developer Certification (1Z0-819)
 - [ ] get [Oracle Java SE 11 Developer Certification (1Z0-819)](https://education.oracle.com/java-se-11-developer/pexam_1Z0-819)
