@@ -126,6 +126,36 @@ public final class String1 {
         return str.substring(0,2);
     }
 
+    /** https://codingbat.com/prob/p138183 */
+    public static String lastChars(String a, String b) {
+        if (a.length() == 0) a = "@";
+        if (b.length() == 0) b = "@";
+        return a.substring(0,1) + b.substring(b.length()-1);
+    }
+
+    /** https://codingbat.com/prob/p132118 */
+    public static String conCat(String a, String b) {
+        if (a != "" && b != "") {
+            if (a.charAt(a.length()-1) == b.charAt(0)) {
+                b = b.substring(1);
+            }
+        }
+        return a + b;
+    }
+
+    /** https://codingbat.com/prob/p194786 */
+    public static String lastTwo(String str) {
+        if (str.length() > 2) {
+            return str.substring(0, str.length() - 2) + str.substring(str.length() - 1) + str.substring(str.length() - 2,str.length() - 1);
+        }
+        if (str.length() == 2) {
+            return str.substring(1,2) + str.substring(0,1);
+        }
+        return str;
+    }
+
+
+
 
 
 
