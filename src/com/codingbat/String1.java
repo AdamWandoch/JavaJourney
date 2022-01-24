@@ -154,6 +154,88 @@ public final class String1 {
         return str;
     }
 
+    /** https://codingbat.com/prob/p199216 */
+    public static String seeColor(String str) {
+        if (str.indexOf("red") == 0) return "red";
+        if (str.indexOf("blue") == 0) return "blue";
+        return "";
+    }
+
+    /** https://codingbat.com/prob/p196652 */
+    public static boolean frontAgain(String str) {
+        if (str.length() > 1) {
+            if (str.substring(0,2).equals(str.substring(str.length() - 2))) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /** https://codingbat.com/prob/p105745 */
+    public static String minCat(String a, String b) {
+        if (a.length() != b.length()) {
+            if (a.length() > b.length()) {
+                a = a.substring(a.length() - b.length());
+            } else {
+                b = b.substring(b.length() - a.length());
+            }
+        }
+        return a + b;
+    }
+
+    /** https://codingbat.com/prob/p172063 */
+    public static String extraFront(String str) {
+        if (str.length() > 2) str = str.substring(0,2);
+        return str + str + str;
+    }
+
+    /** https://codingbat.com/prob/p142247 */
+    public static String without2(String str) {
+        if (str.length() == 2) return "";
+        if (str.length() > 2) {
+            if (str.substring(0,2).equals(str.substring(str.length() - 2))) {
+                return str.substring(2);
+            }
+        }
+        return str;
+    }
+
+    /** https://codingbat.com/prob/p110141 */
+    public static String deFront(String str) {
+        String result = "";
+        if (str.length() < 1) return str;
+        if (str.length() < 2) {
+            if (str.equals("a")) return "a";
+            return str;
+        }
+        if (str.length() < 3) {
+            if (str.charAt(0) == 'a') result += "a";
+            if (str.charAt(1) == 'b') result += "b";
+            return result;
+        }
+        if (str.charAt(0) == 'a') result += "a";
+        if (str.charAt(1) == 'b') result += "b";
+        return result + str.substring(2);
+    }
+
+    /** https://codingbat.com/prob/p141494 */
+    public static String startWord(String str, String word) {
+        if (str.equals("")) return "";
+        if (word.length() < 2) return str.substring(0,1);
+        if (str.length() < 3) return "";
+        if (word.substring(1).equals(str.substring(1,word.length()))) {
+            return str.substring(0,word.length());
+        }
+        return "";
+    }
+
+
+
+
+
+
+
+
 
 
 
