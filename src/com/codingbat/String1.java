@@ -5,8 +5,7 @@ package com.codingbat;
  */
 public final class String1 {
 
-    private String1() {
-    }
+    private String1() {}
 
     /** https://codingbat.com/prob/p171896 */
     public static String helloName(String name) {
@@ -227,6 +226,23 @@ public final class String1 {
             return str.substring(0,word.length());
         }
         return "";
+    }
+
+    /** https://codingbat.com/prob/p151940 */
+    public static String withoutX(String str) {
+        if (str.length() < 3) return str.replaceAll("x","");
+        String result = "";
+        if (str.charAt(0) != 'x') result += str.substring(0,1);
+        result += str.substring(1,str.length()-1);
+        if (str.charAt(str.length()-1) != 'x') result += str.substring(str.length()-1);
+        return result;
+    }
+
+    /** https://codingbat.com/prob/p151359 */
+    public static String withoutX2(String str) {
+        if (str.length() <= 2) return str.replace("x","");
+        String start = str.substring(0,2).replaceAll("x","");
+        return start + str.substring(2);
     }
 
 
