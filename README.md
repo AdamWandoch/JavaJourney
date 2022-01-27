@@ -1,5 +1,5 @@
 # JavaJourney
-### This repository has been created so I can document and track my progress along the way to becoming a professional software developer.
+### This repository has been created so I can document and track my progress along the way to becoming a professional software developer. [my Mentor](https://www.linkedin.com/in/guiajava/)
 
 #### Current plan as follows:  
 * ## Step 1: Core Java
