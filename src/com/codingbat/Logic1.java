@@ -121,5 +121,106 @@ public final class Logic1 {
         return 1;
     }
 
+    /** https://codingbat.com/prob/p137136 */
+    public String fizzString(String str) {
+        if (str.charAt(0) == 'f') {
+            if (str.charAt(str.length() - 1) == 'b') return "FizzBuzz";
+            return "Fizz";
+        }
+        if (str.charAt(str.length() - 1) == 'b') return "Buzz";
+        return str;
+    }
+
+    /** https://codingbat.com/prob/p115243 */
+
+    public String fizzString2(int n) {
+        if (n % 3 == 0) {
+            if (n % 5 == 0) return "FizzBuzz!";
+            return "Fizz!";
+        }
+        if (n % 5 == 0) return "Buzz!";
+        return n + "!";
+    }
+
+    /** https://codingbat.com/prob/p113261 */
+    public boolean twoAsOne(int a, int b, int c) {
+        return (a + b == c || a + c == b || b + c == a);
+    }
+
+    /** https://codingbat.com/prob/p154188 */
+    public boolean inOrder(int a, int b, int c, boolean bOk) {
+        if (!bOk) return (b > a && c > b);
+        return c > b;
+    }
+
+    /** https://codingbat.com/prob/p140272 */
+    public boolean inOrderEqual(int a, int b, int c, boolean equalOk) {
+        if (!equalOk) return (a < b && b < c);
+        return (a <= b && b <= c);
+    }
+
+    /** https://codingbat.com/prob/p169213 */
+    public boolean lastDigit(int a, int b, int c) {
+        return (a % 10 == b % 10 || b % 10 == c % 10 || a % 10 == c % 10);
+    }
+
+    /** https://codingbat.com/prob/p179196 */
+    public boolean lessBy10(int a, int b, int c) {
+        int min = Math.min(a,b);
+        min = Math.min(min,c);
+        return (a - min >= 10 || b - min >= 10 || c - min >= 10);
+    }
+
+    /** https://codingbat.com/prob/p115233 */
+    public int withoutDoubles(int die1, int die2, boolean noDoubles) {
+        if (noDoubles) {
+            if (die1 == die2) {
+                if (die1 == 6) return 7;
+                return  die1 * 2 + 1;
+            }
+        }
+        return die1 + die2;
+    }
+
+    /** https://codingbat.com/prob/p115384 */
+    public int maxMod5(int a, int b) {
+        if (a == b) return 0;
+        if (a % 5 == b % 5) return Math.min(a, b);
+        return Math.max(a, b);
+    }
+
+    /** https://codingbat.com/prob/p170833 */
+    public int redTicket(int a, int b, int c) {
+        if (a == 2 && b == 2 && c == 2) return 10;
+        if (a == b && b == c) return 5;
+        if (a != b && a != c) return 1;
+        return 0;
+    }
+
+    /** https://codingbat.com/prob/p120633 */
+    public int greenTicket(int a, int b, int c) {
+        if (a == b && b == c) return 20;
+        if (a == b || b == c || a == c) return 10;
+        return 0;
+    }
+
+    /** https://codingbat.com/prob/p192267 */
+    public int blueTicket(int a, int b, int c) {
+        if (a + b == 10 || b + c == 10 || a + c == 10) return 10;
+        if (a + b == b + c + 10 || a + b == a + c + 10) return 5;
+        return 0;
+    }
+
+    /** https://codingbat.com/prob/p153748 */
+    public boolean shareDigit(int a, int b) {
+        return (a / 10 == b / 10 || a / 10 == b % 10 || a % 10 == b / 10 || a % 10 == b % 10);
+    }
+
+    /** https://codingbat.com/prob/p118077 */
+    public int sumLimit(int a, int b) {
+        if (String.valueOf(a).length() == String.valueOf(a+b).length()) return a + b;
+        return a;
+    }
+
 
 }
