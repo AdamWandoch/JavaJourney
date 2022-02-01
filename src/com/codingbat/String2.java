@@ -145,12 +145,43 @@ public final class String2 {
 
     /** https://codingbat.com/prob/p159772 */
     public boolean xyzMiddle(String str) {
-        if (str.contains("xyz")) {
-            int left = str.indexOf("xyz") - 1;
-            int right = // TBC
-        }
+        for (int i = 0; i <= str.length() - 3; i++) {
+            if (str.substring(i, i + 3).equals("xyz") &&
+                    Math.abs(str.length() - i - 3 - i) <= 1) return true;
+            }
         return false;
     }
 
+    /** https://codingbat.com/prob/p129952 */
+    public String getSandwich(String str) {
+        if (str.indexOf("bread") < str.lastIndexOf("bread")) {
+            int left = str.indexOf("bread");
+            int right = str.lastIndexOf("bread");
+            return str.substring(left + 5, right);
+        }
+        return "";
+    }
 
+    /** https://codingbat.com/prob/p194491 */
+    public boolean sameStarChar(String str) {
+        if (str.length() > 2) {
+            for (int i = 1; i < str.length() - 1; i++) {
+                if (str.charAt(i) == '*' && str.charAt(i - 1) != str.charAt(i + 1)) return false;
+            }
+        }
+        return true;
+    }
+
+    /** https://codingbat.com/prob/p122943 */
+    public String oneTwo(String str) {
+        String result = "";
+        if (str.length() > 2) {
+            int limitIndex = str.length() - 1 - str.length() % 3;
+            for (int i = 0; i <= limitIndex ; i += 3) {
+                result += str.substring(i + 1, i + 3);
+                result += str.charAt(i);
+            }
+        }
+        return result;
+    }
 }
