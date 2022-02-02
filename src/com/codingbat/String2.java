@@ -184,4 +184,16 @@ public final class String2 {
         }
         return result;
     }
+
+    /** https://codingbat.com/prob/p180759 */
+    public String zipZap(String str) {
+        return str.replaceAll("z.p", "zp");
+    }
+
+    /** https://codingbat.com/prob/p139564 */
+    public String starOut(String str) {
+        return str.replaceAll(".?\\*+.?", "");
+    }
+
+
 }
