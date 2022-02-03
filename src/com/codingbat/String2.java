@@ -195,5 +195,37 @@ public final class String2 {
         return str.replaceAll(".?\\*+.?", "");
     }
 
+    /** https://codingbat.com/prob/p170829 */
+    public String plusOut(String str, String word) {        //NOT COMPLETE CHECK GRAPHS ON BAT
+        String result = "";
+        for (int i = 0; i < str.length(); i++) {
+            if (!word.contains(String.valueOf(str.charAt(i)))) {
+                result += "+";
+            } else {
+                result += String.valueOf(str.charAt(i));
+            }
+        }
+        return result;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }
