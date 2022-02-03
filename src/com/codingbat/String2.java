@@ -196,32 +196,20 @@ public final class String2 {
     }
 
     /** https://codingbat.com/prob/p170829 */
-    public String plusOut(String str, String word) {        //NOT COMPLETE CHECK GRAPHS ON BAT
+    public String plusOut(String str, String word) {
+
         String result = "";
         for (int i = 0; i < str.length(); i++) {
-            if (!word.contains(String.valueOf(str.charAt(i)))) {
-                result += "+";
-            } else {
-                result += String.valueOf(str.charAt(i));
-            }
+            if (i <= str.length() - word.length()) {
+                if (str.startsWith(word, i)) {
+                    result += word;
+                    i += word.length() - 1;
+                } else result += "+";
+            } else result += "+";
         }
         return result;
+
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
