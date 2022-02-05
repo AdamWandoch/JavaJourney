@@ -211,7 +211,21 @@ public final class String2 {
 
     }
 
-
+    /** https://codingbat.com/prob/p147538 */
+    public String wordEnds(String str, String word) {
+        int sL = str.length();
+        int wL = word.length();
+        if (sL <= wL) return "";
+        String result = "";
+        for (int i = 0; i <= sL - wL; i++) {
+            if (str.startsWith(word, i)) {
+                if (i - 1 >= 0) result += str.charAt(i - 1);
+                if (i + wL < sL) result += str.charAt(i + wL);
+                i += (wL - 1);
+            }
+        }
+        return result;
+    }
 
 
 
