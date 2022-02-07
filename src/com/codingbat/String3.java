@@ -47,4 +47,17 @@ public final class String3 {
         return isCount == notCount;
     }
 
+    /** https://codingbat.com/prob/p198664 */
+    public boolean gHappy(String str) { //NOT WORKING NEEDS REWORK
+        if (str.equals("gg") || str.equals("")) return true;
+        if (str.length() < 2 || !str.contains("gg")) return false;
+        for (int i = 1; i < str.length(); i++) {
+            if (i < str.length() - 1) {
+                if (str.charAt(i) == 'g' && str.charAt(i - 1) != 'g' && str.charAt(i + 1) != 'g') return false;
+            } else
+                if (!str.endsWith("gg")) return false;
+        }
+        return true;
+    }
+
 }
