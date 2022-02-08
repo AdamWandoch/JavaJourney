@@ -60,4 +60,34 @@ public final class String3 {
         return true;
     }
 
+    /** https://codingbat.com/prob/p195714 */
+    public int countTriple(String str) {
+        if (str.length() < 3) return 0;
+        int counter = 0;
+        for (int i = 0; i < str.length() - 2; i++) {
+            if (str.charAt(i) == str.charAt(i + 1) && str.charAt(i) == str.charAt(i + 2)) counter++;
+        }
+        return counter;
+    }
+
+    /** https://codingbat.com/prob/p197890 */
+    public int sumDigits(String str) {
+        if (str == null || str.equals("")) return 0;
+        int sum = 0;
+        for (int i = 0; i < str.length(); i++) {
+            if (Character.isDigit(str.charAt(i))) sum += Integer.parseInt(str.substring(i, i + 1));
+        }
+        return sum;
+    }
+
+    /** https://codingbat.com/prob/p131516 */
+    public String sameEnds(String string) {
+        if (string.length() < 2) return "";
+        String result = "";
+        for (int i = 1; i <= string.length() / 2; i++) {
+            if (string.substring(0, i).equals(string.substring(string.length() - i))) result = string.substring(0, i);
+        }
+        return result;
+    }
+
 }
