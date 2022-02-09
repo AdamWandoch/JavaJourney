@@ -90,4 +90,33 @@ public final class String3 {
         return result;
     }
 
+    /** https://codingbat.com/prob/p139411 */
+    public String mirrorEnds(String string) {
+        if (string.length() < 2) return string;
+        String result = "";
+        for (int i = 0; i < string.length(); i++) {
+            if (string.charAt(i) == string.charAt(string.length()-1-i)) result += Character.valueOf(string.charAt(i));
+            else return result;
+        }
+        return result;
+    }
+
+    /** https://codingbat.com/prob/p179479 */
+    public int maxBlock(String str) {
+        if (str == "") return 0;
+        if (str.length() < 2) return 1;
+        int counter, result = 1;
+        for (int i = 0; i < str.length() - 1; i++) {
+            counter = 1;
+            if (str.charAt(i) == str.charAt(i + 1)) {
+                for (int j = i + 1; j < str.length(); j++) {
+                    if (str.charAt(i) == str.charAt(j)) counter++;
+                    else break;
+                }
+                if (counter > result) result = counter;
+            }
+        }
+        return result;
+    }
+
 }
