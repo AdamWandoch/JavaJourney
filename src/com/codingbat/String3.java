@@ -119,4 +119,22 @@ public final class String3 {
         return result;
     }
 
+    /** https://codingbat.com/prob/p121193 */
+    public int sumNumbers(String str) {
+        int result = 0;
+        String tempStr = "0";
+        char[] letters = str.toCharArray();
+        for (int i = 0; i < letters.length; i++) {
+            if (Character.isDigit(letters[i])) {
+                tempStr += letters[i];
+                if (i == letters.length - 1) return result += Integer.parseInt(tempStr);
+            }
+            else {
+                result += Integer.parseInt(tempStr);
+                tempStr = "0";
+            }
+        }
+        return result;
+    }
+
 }
