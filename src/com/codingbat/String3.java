@@ -137,4 +137,9 @@ public final class String3 {
         return result;
     }
 
+    /** https://codingbat.com/prob/p154137 */
+    public String notReplace(String str) {
+        return str.replaceAll("\\bis\\b", "is not");
+    }
+
 }
