@@ -5,7 +5,7 @@
 * ## Step 1: Core Java
 - [ ] finish the [introductory online course](https://www.udemy.com/course/java-the-complete-java-developer-course/) ![Course Progress](resources/udemyProgress.png)
 - [x] [practice](https://github.com/AdamWandoch/JavaJourney/tree/master/src/com) core Java:
-  - [CodingBat](https://codingbat.com/java) # Count: 192 | check [CODE](https://github.com/AdamWandoch/JavaJourney/tree/master/src/com/codingbat) and [PROGRESS](https://codingbat.com/done?user=wandoch.adam@gmail.com&tag=2797055556)
+  - [CodingBat](https://codingbat.com/java) # Count: 199 | check [CODE](https://github.com/AdamWandoch/JavaJourney/tree/master/src/com/codingbat) and [PROGRESS](https://codingbat.com/done?user=wandoch.adam@gmail.com&tag=2797055556)
   - [Exercism](https://exercism.org/tracks/java) # Count: 6/129 | check [CODE](https://exercism.org/profiles/AdamWandoch/solutions) and [PROGRESS](https://exercism.org/profiles/AdamWandoch)
 * ## Step 2: Certification
 - [ ] prepare for Oracle Java SE 11 Developer Certification (1Z0-819)

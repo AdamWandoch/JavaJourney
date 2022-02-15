@@ -138,17 +138,77 @@ public class Array2 {
         return (one ^ four);
     }
 
+    /** https://codingbat.com/prob/p110222 */
+    public boolean isEverywhere(int[] nums, int val) {
+        for (int i = 0; i < nums.length - 1; i++) {
+            if (nums[i] != val && nums[i + 1] != val) return false;
+        }
+        return true;
+    }
 
+    /** https://codingbat.com/prob/p191878 */
+    public boolean either24(int[] nums) {
+        boolean twoPaired = false, fourPair = false;
+        for (int i = 0; i < nums.length - 1; i++) {
+            if (nums[i] == 2 && nums[i + 1] == 2) twoPaired = true;
+            if (nums[i] == 4 && nums[i + 1] == 4) fourPair = true;
+        }
+        return (twoPaired ^ fourPair);
+    }
 
+    /** https://codingbat.com/prob/p136254 */
+    public int matchUp(int[] nums1, int[] nums2) {
+        int counter = 0;
+        for (int i = 0; i < nums1.length; i++) {
+            if ((Math.abs(nums1[i] - nums2[i]) < 3) && nums1[i] != nums2[i]) counter++;
+        }
+        return counter;
+    }
 
+    /** https://codingbat.com/prob/p168357 */
+    public boolean has77(int[] nums) {
+        if (nums.length < 2) return false;
+        for (int i = 0; i < nums.length - 2; i++) {
+            if ((nums[i] == 7 && nums[i + 1] == 7) || (nums[i] == 7 && nums[i + 2] == 7)) return true;
+        }
+        return (nums[nums.length - 1] == 7 && nums[nums.length - 2] == 7);
+    }
 
+    /** https://codingbat.com/prob/p169260 */
+    public boolean has12(int[] nums) {
+        boolean hasOne = false;
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] == 1) hasOne = true;
+            if (hasOne) {
+                if (nums[i] == 2) return true;
+            }
+        }
+        return false;
+    }
 
+    /** https://codingbat.com/prob/p159979 */
+    public boolean modThree(int[] nums) {
+        if (nums.length < 3) return false;
+        for (int i = 0; i < nums.length - 2; i++) {
+            if ((nums[i] % 2 == 0 && nums[i+1] % 2 == 0 && nums[i+2] % 2 == 0) ||
+                (nums[i] % 2 != 0 && nums[i+1] % 2 != 0 && nums[i+2] % 2 != 0))
+                return true;
+        }
+        return false;
+    }
 
-
-
-
-
-
+    /** https://codingbat.com/prob/p109783 */
+    public boolean haveThree(int[] nums) {
+        if (nums.length < 3) return false;
+        int counter = 0;
+        for (int i = 0; i < nums.length - 1; i++) {
+            if (counter > 3) return false;
+            if (nums[i] == 3) counter++;
+            if (nums[i] == 3 && nums[i + 1] == 3) return false;
+        }
+        if (nums[nums.length - 1] == 3) counter++;
+        return (counter == 3);
+    }
 
 
 
