@@ -1,5 +1,7 @@
 package com.codingbat;
 
+import java.util.Arrays;
+
 /** https://codingbat.com/java/Array-2
  * @author of solutions Adam Wandoch
  */
@@ -210,6 +212,64 @@ public class Array2 {
         return (counter == 3);
     }
 
+    /** https://codingbat.com/prob/p134300 */
+    public boolean sameEnds(int[] nums, int len) {
+        if (len > nums.length) return false;
+        for (int i = 0; i < len; i++) {
+            if (nums[i] != nums[nums.length - len + i]) return false;
+        }
+        return true;
+    }
+
+    /** https://codingbat.com/prob/p137874 */
+    public boolean tripleUp(int[] nums) {
+        if (nums.length < 4) return false;
+        for (int i = 0; i < nums.length - 2; i++) {
+            if (nums[i] == nums[i + 1] - 1 && nums[i] == nums[i + 2] - 2) return true;
+        }
+        return false;
+    }
+
+    /** https://codingbat.com/prob/p142539 */
+    public int[] fizzArray3(int start, int end) {
+        int[] result = new int[end - start];
+        for (int i = 0; i < result.length; i++) {
+            result[i] = start + i;
+        }
+        return result;
+    }
+
+    /** https://codingbat.com/prob/p105031 */
+    public int[] shiftLeft(int[] nums) {
+        if (nums.length < 2) return nums;
+        int temp = nums[0];
+        for (int i = 0; i < nums.length - 1; i++) {
+            nums[i] = nums[i + 1];
+        }
+        nums[nums.length - 1] = temp;
+        return nums;
+    }
+
+    /** https://codingbat.com/prob/p199484 */
+    public int[] tenRun(int[] nums) {
+        int temp;
+        for (int i = 0; i < nums.length - 1; i++) {
+            if (nums[i] % 10 == 0) {
+                temp = nums[i];
+                if (nums[i + 1] % 10 != 0) nums[i + 1] = temp;
+            }
+        }
+        return nums;
+    }
+
+    /** https://codingbat.com/prob/p100246 */
+    public int[] pre4(int[] nums) {
+        if (nums.length < 2) return new int[0];
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] == 4) return Arrays.copyOf(nums, i);
+        }
+        return nums;
+    }
 
 
 }
