@@ -271,5 +271,24 @@ public class Array2 {
         return nums;
     }
 
+    /** https://codingbat.com/prob/p164144 */
+    public int[] post4(int[] nums) {
+        if (nums.length < 2) return new int[0];
+        for (int i = (nums.length - 1); i >= 0; i--) {
+            if (nums[i] == 4) return Arrays.copyOfRange(nums, i + 1, nums.length);
+        }
+        return nums;
+    }
+
+    /** https://codingbat.com/prob/p169506 */
+    public int[] notAlone(int[] nums, int val) {
+        if (nums.length < 3) return nums;
+        for (int i = 1; i < nums.length - 1; i++) {
+            if (nums[i] == val && nums[i] != nums[i - 1] && nums[i] != nums[i + 1])
+                nums[i] = Math.max(nums[i - 1], nums[i + 1]);
+        }
+        return nums;
+    }
+
 
 }
