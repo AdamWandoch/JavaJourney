@@ -212,6 +212,18 @@ public class Array2 {
         return (counter == 3);
     }
 
+    /** https://codingbat.com/prob/p102145 */
+    public boolean twoTwo(int[] nums) {
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] == 2) {
+                i++;
+                if (!(i < (nums.length)) || nums[i] != 2) return false;
+                while (i < nums.length && nums[i] == 2) i++;
+            }
+        }
+        return true;
+    }
+
     /** https://codingbat.com/prob/p134300 */
     public boolean sameEnds(int[] nums, int len) {
         if (len > nums.length) return false;
@@ -289,6 +301,5 @@ public class Array2 {
         }
         return nums;
     }
-
 
 }
