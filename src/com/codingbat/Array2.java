@@ -5,7 +5,7 @@ import java.util.Arrays;
 /** https://codingbat.com/java/Array-2
  * @author of solutions Adam Wandoch
  */
-public class Array2 {
+public final class Array2 {
 
     /** https://codingbat.com/prob/p162010 */
     public int countEvens(int[] nums) {
@@ -302,4 +302,61 @@ public class Array2 {
         return nums;
     }
 
+    /** https://codingbat.com/prob/p193753*/
+    public int[] zeroFront(int[] nums) {
+        int[] result = new int[nums.length];
+        int frontIndex = 0, backIndex = result.length - 1;
+        for (int n : nums) {
+            if (n == 0)
+                result[frontIndex++] = n;
+            else result[backIndex--] = n;
+        }
+        return result;
+    }
+
+    /** https://codingbat.com/prob/p196976 */
+    public int[] withoutTen(int[] nums) {
+        int[] result = new int[nums.length];
+        int frontIndex = 0, backIndex = result.length - 1;
+        for (int n : nums) {
+            if (n != 10)
+                result[frontIndex++] = n;
+            else result[backIndex--] = 0;
+        }
+        return result;
+    }
+
+    /** https://codingbat.com/prob/p187050 */
+    public int[] zeroMax(int[] nums) {
+        int largestOdd = 0;
+        for (int i = nums.length - 1; i >= 0; i--) {
+            if (nums[i] == 0) nums[i] = largestOdd;
+            if (nums[i] % 2 != 0 && nums[i] > largestOdd) largestOdd = nums[i];
+        }
+        return nums;
+    }
+
+    /** https://codingbat.com/prob/p105771 */
+    public int[] evenOdd(int[] nums) {
+        int[] result = new int[nums.length];
+        int frontIndex = 0, backIndex = result.length - 1;
+        for (int n : nums) {
+            if (n % 2 == 0)
+                result[frontIndex++] = n;
+            else result[backIndex--] = n;
+        }
+        return result;
+    }
+
+    /** https://codingbat.com/prob/p153059 */
+    public String[] fizzBuzz(int start, int end) {
+        String[] result = new String[end - start];
+        for (int i = 0; i < result.length; i++) {
+            if ((i + start) % 3 == 0) result[i] = "Fizz";
+            if ((i + start) % 5 == 0) result[i] = "Buzz";
+            if ((i + start) % 15 == 0) result[i] = "FizzBuzz";
+            if (result[i] == null) result[i] = String.valueOf(i + start);
+        }
+        return result;
+    }
 }
