@@ -7,6 +7,8 @@ import java.util.Arrays;
  */
 public final class Array2 {
 
+    private Array2() {}
+
     /** https://codingbat.com/prob/p162010 */
     public int countEvens(int[] nums) {
         int count = 0;
