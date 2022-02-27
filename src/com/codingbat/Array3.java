@@ -1,8 +1,5 @@
 package com.codingbat;
 
-import java.util.Arrays;
-import java.util.Collections;
-
 /** https://codingbat.com/java/Array-3
  * @author of solutions Adam Wandoch
  */
@@ -26,15 +23,39 @@ public final class Array3 {
 
     /** https://codingbat.com/prob/p159339*/
     public int[] fix34(int[] nums) {
-        int[] result = new int[nums.length];
-        for (int i = 0; i < nums.length; i++) {
+        for (int i = 0; i < nums.length - 1; i++) {
             if (nums[i] == 3) {
                 int temp = nums[i + 1];
                 nums[i + 1] = 4;
-                nums.indexOf
+                for (int j = (i + 2); j < nums.length; j++) {
+                    if (nums[j] == 4) {
+                        nums[j] = temp;
+                    }
+                }
             }
         }
+        return nums;
     }
+
+    /** https://codingbat.com/prob/p125819 */ //NOT WORKING STILL
+    public int[] fix45(int[] nums) {
+        int temp5Index = -1, temp;
+        for (int i = 0; i < nums.length - 1; i++) {
+            if (nums[i] == 4) {
+                for (int j = 0; j < nums.length; j++) {
+                    if (nums[j] == 5 && j >= temp5Index) {
+                        temp = nums[i + 1];
+                        nums[i + 1] = 5;
+                        nums[j] = temp;
+                        temp5Index = j;
+                        break;
+                    }
+                }
+            }
+        }
+        return nums;
+    }
+
 
 
 
