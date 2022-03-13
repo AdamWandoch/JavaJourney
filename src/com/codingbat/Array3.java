@@ -62,17 +62,28 @@ public final class Array3 {
 
     /** https://codingbat.com/prob/p158767 */
     public boolean canBalance(int[] nums) {
-
-
+        int left = 0, right = 0;
+        for (int i = 0; i < nums.length; i++) {
+            right += nums[i];
+        }
+        if (left == right) return true;
+        left += nums[0];
+        right -= nums[0];
+        for (int i = 1; i < nums.length; i++) {
+            if (left == right) return true;
+            else {
+                left += nums[i];
+                right -= nums[i];
+            }
+        }
         return false;
     }
 
-
-
-
-
-
-
+    /** https://codingbat.com/prob/p134022 */
+    public boolean linearIn(int[] outer, int[] inner) {
+        //to be implemented
+        return false;
+    }
 
 
 }
