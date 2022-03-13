@@ -37,24 +37,39 @@ public final class Array3 {
         return nums;
     }
 
-    /** https://codingbat.com/prob/p125819 */ //NOT WORKING STILL
+    /** https://codingbat.com/prob/p125819 */
     public int[] fix45(int[] nums) {
-        int temp5Index = -1, temp;
-        for (int i = 0; i < nums.length - 1; i++) {
+        for (int i = 0; i < nums.length; i++) {
             if (nums[i] == 4) {
                 for (int j = 0; j < nums.length; j++) {
-                    if (nums[j] == 5 && j >= temp5Index) {
-                        temp = nums[i + 1];
-                        nums[i + 1] = 5;
-                        nums[j] = temp;
-                        temp5Index = j;
-                        break;
+                    if (nums[j] == 5) {
+                        if (j > 0 && nums[j-1] != 4) {
+                            int tmp = nums[i+1];
+                            nums[i+1] = 5;
+                            nums[j] = tmp;
+                        }
+                        else if (j == 0) {
+                            int tmp = nums[i+1];
+                            nums[i+1] = 5;
+                            nums[j] = tmp;
+                        }
                     }
                 }
             }
         }
         return nums;
     }
+
+    /** https://codingbat.com/prob/p158767 */
+    public boolean canBalance(int[] nums) {
+
+
+        return false;
+    }
+
+
+
+
 
 
 
