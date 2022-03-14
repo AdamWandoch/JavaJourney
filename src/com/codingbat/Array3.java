@@ -81,9 +81,28 @@ public final class Array3 {
 
     /** https://codingbat.com/prob/p134022 */
     public boolean linearIn(int[] outer, int[] inner) {
-        //to be implemented
+        int count = 0;
+        if (inner.length == 0) {
+            return true;
+        }
+        int k = 0;
+        for (int i = 0; i < outer.length; i++) {
+            if (outer[i] == inner[k]) {
+                count++;
+                k++;
+            } else if (outer[i] > inner[k]) {
+                return false;
+            }
+            if (count == inner.length) return true;
+        }
         return false;
     }
+
+    /** https://codingbat.com/prob/p155405 */
+//    public int[] squareUp(int n) {
+//        int[] result = new int[n*n];
+//        //tbc
+//    }
 
 
 }
