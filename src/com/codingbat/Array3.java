@@ -99,10 +99,34 @@ public final class Array3 {
     }
 
     /** https://codingbat.com/prob/p155405 */
-//    public int[] squareUp(int n) {
-//        int[] result = new int[n*n];
-//        //tbc
-//    }
+    public int[] squareUp(int n) {
+        if (n == 0) return new int[0];
+        int[] results = new int[n*n];
+        int counter = n;
+        for (int i = results.length - 1; i >= n - 1; i -= n) {
+            int value = 1;
+            for (int j = i; value <= counter; j--) {
+                results[j] = value++;
+            }
+            counter--;
+        }
+        return results;
+    }
 
+    /** https://codingbat.com/prob/p104090 */ // NOT WORKING FOR VALUES ABOVE 3
+    public static int[] seriesUp(int n) {
+        if (n < 1) return new int[0];
+        if (n == 1) return new int[]{1};
+        int[] results = new int[n * (n + 1) / 2];
+        int counter = 1;
+        for (int i = 0; i <= n; i += counter - 1) {
+            int value = 1;
+            for (int j = i; value <= counter; j++) {
+                results[j] = value++;
+            }
+            counter++;
+        }
+        return results;
+    }
 
 }
