@@ -114,19 +114,20 @@ public final class Array3 {
     }
 
     /** https://codingbat.com/prob/p104090 */ // NOT WORKING FOR VALUES ABOVE 3
-    public static int[] seriesUp(int n) {
+    public int[] seriesUp(int n) {
         if (n < 1) return new int[0];
         if (n == 1) return new int[]{1};
         int[] results = new int[n * (n + 1) / 2];
-        int counter = 1;
-        for (int i = 0; i <= n; i += counter - 1) {
-            int value = 1;
-            for (int j = i; value <= counter; j++) {
-                results[j] = value++;
+        int currentIndex = 0;
+        int currentLimit = 1;
+        int value = 1;
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < currentLimit; j++) {
+                results[currentIndex++] = value++;
             }
-            counter++;
+            value = 1;
+            currentLimit++;
         }
         return results;
     }
-
 }
