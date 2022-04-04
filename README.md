@@ -4,7 +4,7 @@
 
 ### Current plan as follows:  
 * ## Step 1: Core Java
-- [ ] finish the [introductory online course](https://www.udemy.com/course/java-the-complete-java-developer-course/) ![Course Progress](resources/udemyProgress.png)
+- [x] finish the [introductory online course](https://www.udemy.com/course/java-the-complete-java-developer-course/) | [VIEW CERTIFICATE](https://drive.google.com/file/d/131dFFqd1HIjyB4EX7QvsynZTgkFU5VTK/view?usp=sharing)
 - [x] [practice](https://github.com/AdamWandoch/JavaJourney/tree/master/src/com) core Java:
   - [CodingBat](https://codingbat.com/java) # Count: 220 | check [CODE](https://github.com/AdamWandoch/JavaJourney/tree/master/src/com/codingbat) and [PROGRESS](https://codingbat.com/done?user=wandoch.adam@gmail.com&tag=2797055556)
   - [Exercism](https://exercism.org/tracks/java) # Count: 6/129 | check [CODE](https://exercism.org/profiles/AdamWandoch/solutions) and [PROGRESS](https://exercism.org/profiles/AdamWandoch)
